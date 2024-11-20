@@ -329,6 +329,10 @@ require('lazy').setup({
     'tpope/vim-fugitive',
   },
   {
+    'danymat/neogen',
+    config = true,
+  },
+  {
     lazy = false,
     'christoomey/vim-tmux-navigator',
     cmd = {
@@ -471,6 +475,15 @@ require('lazy').setup({
     },
   },
   { 'Bilal2453/luvit-meta', lazy = true },
+  {
+    'Civitasv/cmake-tools.nvim',
+    opts = {},
+    --config = function()
+    --require('cmake-tools').setup {
+    -- cmake_build_directory = 'build/${variant:buildType}',
+    --}
+    --end,
+  },
   {
     -- Main LSP Configuration
     'neovim/nvim-lspconfig',
