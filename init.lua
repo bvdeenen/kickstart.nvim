@@ -93,6 +93,7 @@ vim.g.maplocalleader = ' '
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = false
 vim.o.tildeop = true
+vim.o.tabstop = 4
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`
@@ -354,6 +355,8 @@ require('lazy').setup({
     'danymat/neogen',
     config = true,
   },
+  'alvan/vim-closetag',
+  'averms/black-nvim',
   {
     lazy = false,
     'christoomey/vim-tmux-navigator',
