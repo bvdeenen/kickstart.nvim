@@ -653,6 +653,7 @@ require('lazy').setup({
         clangd = {},
         neocmakelsp = {},
         basedpyright = {},
+        zls = {},
         -- gopls = {},
         -- pyright = {},
         -- rust_analyzer = {},
