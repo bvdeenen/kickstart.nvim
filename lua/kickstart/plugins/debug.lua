@@ -104,6 +104,41 @@ return {
       --    Feel free to remove or use ones that you like more! :)
       --    Don't feel like these are good choices.
       icons = { expanded = '▾', collapsed = '▸', current_frame = '*' },
+      layouts = {
+        {
+          elements = {
+            {
+              id = 'scopes',
+              size = 0.7,
+            },
+            {
+              id = 'breakpoints',
+              size = 0.1,
+            },
+            {
+              id = 'stacks',
+              size = 0.1,
+            },
+            {
+              id = 'watches',
+              size = 0.1,
+            },
+          },
+          position = 'left',
+          size = 60,
+        },
+        {
+          elements = { {
+            id = 'repl',
+            size = 0.3,
+          }, {
+            id = 'console',
+            size = 0.7,
+          } },
+          position = 'bottom',
+          size = 10,
+        },
+      },
       controls = {
         icons = {
           pause = '⏸',
