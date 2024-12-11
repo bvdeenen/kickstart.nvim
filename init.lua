@@ -95,6 +95,7 @@ vim.g.loaded_matchparen = false
 vim.cmd [[ colorscheme desert ]]
 vim.o.tildeop = true
 vim.o.tabstop = 4
+vim.opt.expandtab = true
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 
@@ -392,11 +393,17 @@ require('lazy').setup({
         --   },
         -- },
         -- pickers = {}
+        pickers = {
+          find_files = {
+            theme = 'ivy',
+          },
+        },
         extensions = {
           ['ui-select'] = {
             require('telescope.themes').get_dropdown(),
           },
         },
+        require('telescope').load_extension 'fzf',
       }
 
       -- Enable Telescope extensions if they are installed
@@ -415,6 +422,7 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
       vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
+      vim.keymap.set('n', '<leader>sG', builtin.git_files, { desc = '[S] Find [G]it files' })
 
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>/', function()
