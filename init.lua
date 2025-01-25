@@ -632,7 +632,9 @@ require('lazy').setup({
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       -- Bart
       local servers = {
-        clangd = {},
+        clangd = {
+          filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda' }, -- exclude "proto".
+        },
         neocmakelsp = {},
         basedpyright = {},
         zls = {},
@@ -989,6 +991,22 @@ require('lazy').setup({
     },
   },
 })
+
+local lspconfig = require 'lspconfig'
+local configs = require 'lspconfig.configs'
+
+if not configs.protobuf_lsp then
+  configs.protobuf_lsp = {
+    default_config = {
+      cmd = { 'protobuf-language-server' },
+      filetypes = { 'proto' },
+      version = '1.0',
+      single_file_support = true,
+      root_dir = lspconfig.util.root_pattern '.git',
+    },
+  }
+end
+lspconfig.protobuf_lsp.setup {}
 
 vim.api.nvim_create_autocmd('FileType', {
   pattern = { 'c', 'cpp' },
