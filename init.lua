@@ -92,7 +92,7 @@ vim.g.maplocalleader = ' '
 
 -- Bart
 vim.g.loaded_matchparen = false
-vim.cmd [[ colorscheme desert ]]
+vim.cmd [[ colorscheme slate ]]
 vim.o.tildeop = true
 vim.o.tabstop = 4
 vim.opt.expandtab = true
@@ -397,6 +397,9 @@ require('lazy').setup({
           find_files = {
             theme = 'ivy',
           },
+          colorscheme = {
+            enable_preview = true,
+          },
         },
         extensions = {
           ['ui-select'] = {
@@ -423,6 +426,7 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
       vim.keymap.set('n', '<leader>sG', builtin.git_files, { desc = '[S] Find [G]it files' })
+      vim.keymap.set('n', '<leader>sC', builtin.colorscheme, { desc = '[S] Find [C]olorschemes' })
 
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>/', function()
