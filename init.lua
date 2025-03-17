@@ -92,7 +92,7 @@ vim.g.maplocalleader = ' '
 
 -- Bart
 vim.g.loaded_matchparen = false
-vim.cmd [[ colorscheme zaibatsu ]]
+vim.cmd [[ colorscheme gruvbox ]]
 vim.o.tildeop = true
 vim.o.tabstop = 4
 vim.opt.expandtab = true
