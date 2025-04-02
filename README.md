@@ -115,6 +115,7 @@ examples of adding popularly requested plugins.
 > For more information about a particular plugin check its repository's documentation.
 
 
+<<<<<<< HEAD
 ### Getting Started
 
 [The Only Video You Need to Get Started with Neovim](https://youtu.be/m8C0Cq9Uv9o)
@@ -238,3 +239,6 @@ sudo pacman -S --noconfirm --needed gcc make git ripgrep fd unzip neovim
 ```
 </details>
 
+=======
+I'm using this config actively for C++ development, and will keep it up to date.
+>>>>>>> d7599c321bbfbef5be966142dfe05b5c6eae3e18
